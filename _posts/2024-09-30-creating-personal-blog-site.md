@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "creating personal blog site"
 date: 2024-09-30 22:56:51 +0800
 categories: [Blogging]
