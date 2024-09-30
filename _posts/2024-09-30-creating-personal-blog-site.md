@@ -21,7 +21,7 @@ tags: [jekyll, github pages]
 
 注：如果不需要自定义主题样式，则推荐使用这种方式，因为容易升级，并且能隔离无关文件，使你能够专注于文章内容写作。
 
-### 4.5 部署
+### 1.2 部署
 [GitHub Pages](https://pages.github.com/)是一个通过GitHub托管和发布网页的服务，官方文档：<https://docs.github.com/en/pages>。本文使用GitHub Pages部署个人博客网站。
 
 每个GitHub用户可以创建一个用户级网站，仓库名为`<username>.github.io`，发布地址为 `https://<username>.github.io`。GitHub Pages支持自定义域名，参考文档[About custom domains and GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)。
@@ -37,6 +37,6 @@ tags: [jekyll, github pages]
 
 提交本地修改并推送至远程仓库，将会触发Actions工作流。在仓库的Actions标签页将会看到 "Build and Deploy" 工作流正在运行。构建成功后，即可通过配置的URL访问自己的博客网站。
 
-<https://zzy979.github.io>
+<https://vaxh.github.io/>
 
 ![personal-blog-site](/assets/images/creating-personal-blog-site/personal-blog-site.png)
