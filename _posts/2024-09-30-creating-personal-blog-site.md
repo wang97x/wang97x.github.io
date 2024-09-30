@@ -1,5 +1,5 @@
 ---
-title: 使用Jekyll + GitHub Pages搭建个人博客
+title: "creating personal blog site"
 date: 2024-09-30 22:56:51 +0800
 categories: [Blogging]
 tags: [jekyll, github pages]
