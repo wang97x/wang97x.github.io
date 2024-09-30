@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "creating personal blog site"
+title: "使用Jekyll搭建个人博客"
 date: 2024-09-30 22:56:51 +0800
 categories: [Blogging]
 tags: [jekyll, github pages]
