@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "python库-Gradio"
-date: 2024-09-30 22:56:51 +0800
+date: 2024-10-11 22:56:51 +0800
 categories: [Python]
 tags: [Gradio]
 ---
