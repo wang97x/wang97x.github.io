@@ -1,6 +1,9 @@
 @echo off
 setlocal
 
+:: Set code page to UTF-8
+chcp 65001 >nul
+
 :: Get current date and time using wmic
 for /f "tokens=1,2 delims=." %%a in ('wmic os get localdatetime ^| find "."') do (
     set datetime=%%a
@@ -25,8 +28,8 @@ set filename=%year%-%month%-%day%-%userinput%.md
 
 :: Create a new file based on the template
 (
-    echo --- 
-    echo layout: post 
+    echo ---
+    echo layout: post
     echo title: "%userinput%"
     echo author: "wang"
     echo date: %current_date%
