@@ -4,7 +4,7 @@ title: "Transformer系列"
 author: "wang"
 date: 2024-10-11 11:27:00 +0800
 categories: [LLM]
-tags: [python, transformer, llm]
+tags: [python, Transformer, llm]
 ---
 # Transformer系列-基础架构
 ## Transformer架构：
