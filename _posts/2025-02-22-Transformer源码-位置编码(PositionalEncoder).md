@@ -28,6 +28,7 @@ $$
 
 其中，$pos$是词在序列中的位置，$d_model$是嵌入的维度。
 代码实现
+
 ```
 import numpy as np
 
@@ -39,6 +40,7 @@ def get_absolute_positional_encoding(seq_len, d_model):
     pe[:, 1::2] = np.cos(position * div_term)
     return pe
 ```
+
 2. 案例分析
 在上面的代码中，我们为长度为8的句子生成了一个绝对位置编码矩阵。该矩阵的维度为（8, 32），每一行表示句子中一个位置的编码。通过热图可以看到，不同位置的编码在特定维度上具有不同的模式，这些模式帮助Transformer区分序列中不同位置的元素。
 3. 优缺点
@@ -49,6 +51,7 @@ def get_absolute_positional_encoding(seq_len, d_model):
 相对位置编码（Relative Positional Encoding）并不直接为每个位置分配一个唯一的编码，而是关注序列中各元素之间的相对位置。相对位置编码的核心思想是通过计算序列中元素之间的距离，来表示它们之间的相对关系。这种方法尤其适合处理需要捕捉长距离依赖关系的任务，因为它能够更加灵活地表示序列中的结构信息。
 相对位置编码可以通过多种方式实现，其中最常用的方法之一是将位置差值与注意力权重相结合，即在计算自注意力时，不仅考虑内容，还考虑位置差异。
 代码实现
+
 ```
 import torch
 import torch.nn.functional as F
@@ -86,6 +89,7 @@ class RelativePositionalEncoding(torch.nn.Module):
         positions_matrix = self.relative_positions_matrix[:length, :length]
         return F.embedding(positions_matrix, self.embeddings_table)
 ```
+
 2. 案例分析
 在这个示例中，我们生成了一个基于相对位置的编码矩阵，该矩阵的维度为（8, 8, 32），每个元素表示句子中两个位置之间的相对编码向量。这种编码方式在处理长句子时能够更好地捕捉不同元素之间的关系，因为它可以灵活地处理序列中的相对位置。
 优缺点
