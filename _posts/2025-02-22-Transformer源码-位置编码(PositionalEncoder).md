@@ -19,10 +19,10 @@ Transformer模型自2017年提出以来，已经成为自然语言处理（NLP�
 绝对位置编码（Absolute Positional Encoding）是最常见的一种位置编码方法，其思想是在每个输入序列的元素上添加一个位置向量，以表示该元素在序列中的具体位置。这个位置向量通常通过固定的函数生成，与输入数据无关。通常使用的是正弦和余弦函数，这样生成的编码具有很强的周期性，能够捕捉序列中的相对位置信息。
 对于序列中的第 $pos$ 个位置，绝对位置编码向量的第 $i$ 个维度的值定义如下：
 
-
 $$
 PE(pos, 2i) = \sin\left(\frac{pos}{10000^{\frac{2i}{d_{model}}}}\right)
 $$
+
 $$
 PE(pos, 2i+1) = \cos\left(\frac{pos}{10000^{\frac{2i}{d_{model}}}}\right)
 $$
@@ -31,7 +31,7 @@ $$
 
 2. 代码实现
 
-```
+```python
 import numpy as np
 
 def get_absolute_positional_encoding(seq_len, d_model):
@@ -54,7 +54,7 @@ def get_absolute_positional_encoding(seq_len, d_model):
 相对位置编码可以通过多种方式实现，其中最常用的方法之一是将位置差值与注意力权重相结合，即在计算自注意力时，不仅考虑内容，还考虑位置差异。 
 2. 代码实现
 
-```
+```python
 import torch
 import torch.nn.functional as F
 
@@ -103,7 +103,7 @@ class RelativePositionalEncoding(torch.nn.Module):
 RoPE具有很强的表达能力，尤其是在处理具有对称性或周期性的任务时，能够更加自然地捕捉序列中的位置信息。
 2. 代码实现
 
-```
+```python
 import torch
 
 def rotate_every_two(x):
@@ -119,7 +119,6 @@ def apply_rotary_pos_emb(x, sin, cos):
 在上述代码中，我们通过旋转向量对实现了RoPE编码，并将其应用于Q和K矩阵。可视化结果显示，经过旋转位置编码后，Q矩阵的不同维度展示出明显的周期性模式，这有助于捕捉序列中的周期性或对称性信息。
 4. 优缺点
 RoPE的优势在于其强大的表达能力，特别是在处理具有对称性或周期性特征的数据时表现优异。此外，RoPE具有一定的灵活性，可以应用于不同类型的输入数据。然而，RoPE的实现复杂度较高，且其适用性尚需在更多场景中验证。
-## 位置编码的未来
-位置编码的未来发展方向可能包括从信号处理中汲取灵感，例如小波或分层实现。随着模型越来越多地被量化以便于部署，也可能出现新的编码方案，这些方案在低精度计算下仍然保持鲁棒性。
+
 ## 总结
 位置编码是Transformer模型中至关重要的一部分，不同的编码方式适用于不同的任务和数据类型。本文详细介绍了绝对位置编码、相对位置编码和旋转位置编码的原理、实现及应用，通过具体的案例分析展示了它们在实际任务中的表现。随着NLP领域的不断发展，新的位置编码方法可能会不断涌现，进一步提升Transformer模型在复杂任务中的表现。
