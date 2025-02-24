@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en" }}">
+<html lang="{{ site.lang | default: 'en' }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title | escape }}</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
-  {{ content }}
 </head>
 <body>
   {{ content }}
@@ -16,8 +15,7 @@
       renderMathInElement(document.body, {
         delimiters: [
           {left: "$$", right: "$$", display: true},
-          {left: "$", right: "$", display: false},
-          {left: "\\(", right: "\\)", display: false}
+          {left: "$", right: "$", display: false}
         ]
       });
     });
