@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: math
 title: "Transformer源码-位置编码(PositionalEncoder)"
 author: "wang"
 date: 2025-02-22 13:38:00 +0800
