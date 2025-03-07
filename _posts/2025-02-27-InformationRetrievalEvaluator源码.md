@@ -102,10 +102,10 @@ def output_scores(self, scores):
 `InformationRetrievalEvaluator`类通过提供一系列方法和属性，方便用户在信息检索设置中评估模型的性能。它可以处理查询和大型语料库，并计算多种IR指标，为模型性能的定量评估提供了强有力的工具。
 
 
-以下是对 `compute_metrics` 方法的详细解析：
+以下是对 `compute_metrices` 方法的详细解析：
 
 ### **方法目标**
-`compute_metrics` 方法的主要目标是计算信息检索（Information Retrieval, IR）任务的性能指标。它通过比较查询（queries）与语料库（corpus）中的文档嵌入向量，评估模型在检索相关文档时的性能。
+`compute_metrices` 方法的主要目标是计算信息检索（Information Retrieval, IR）任务的性能指标。它通过比较查询（queries）与语料库（corpus）中的文档嵌入向量，评估模型在检索相关文档时的性能。
 
 ### **参数说明**
 - **`model`**: 嵌入模型，用于编码查询和文档。

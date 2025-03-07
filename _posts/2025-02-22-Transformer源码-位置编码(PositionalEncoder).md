@@ -27,7 +27,7 @@ $$
 PE(pos, 2i+1) = \cos\left(\frac{pos}{10000^{\frac{2i}{d_{model}}}}\right)
 $$
 
-其中，$pos$是词在序列中的位置，$d_{model}$是嵌入的维度。 
+其中$pos$是词在序列中的位置，$d_{model}$是嵌入的维度。 
 
 2. 代码实现
 
