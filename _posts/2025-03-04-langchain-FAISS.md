@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "langchain-FAISS"
+title: "Langchain-FAISS"
 author: "wang"
 date: 2025-03-04 09:00:00 +0800
 categories: [Langchain]
