@@ -3,8 +3,8 @@ layout: post
 title: "MRR@k 与 NDCG@k 详解"
 author: "wang"
 date: 2025-03-20 15:08:00 +0800
-categories: [SentenceTransformers]
-tags: [Reranking]
+categories: [Information Retrieval]
+tags: [SentenceTransformers, Reranking]
 math: true
 ---
 

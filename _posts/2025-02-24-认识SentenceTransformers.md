@@ -3,8 +3,8 @@ layout: post
 title: "认识SentenceTransformers"
 author: "wang"
 date: 2025-02-24 12:53:00 +0800
-categories: [SentenceTransformers]
-tags: [sbert, embedding]
+categories: [Information Retrieval]
+tags: [SentenceTransformers]
 ---
 ### SentenceTransformers 
 

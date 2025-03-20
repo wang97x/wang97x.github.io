@@ -3,8 +3,8 @@ layout: post
 title: "Bi-Encoder与Cross-Encoder对比分析"
 author: "wang"
 date: 2025-03-20 14:34:00 +0800
-categories: [SentenceTransformers, Information Retrieval]
-tags: [Retriever, Reranking]
+categories: [Information Retrieval]
+tags: [SentenceTransformers, Retriever, Reranking]
 ---
 Bi-Encoder和Cross-Encoder是自然语言处理中用于文本匹配的两种主要模型架构，它们在处理方式、效率和应用场景上存在显著差异。以下是它们的详细对比：
 
