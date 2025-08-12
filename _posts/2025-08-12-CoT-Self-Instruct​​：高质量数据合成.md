@@ -6,6 +6,10 @@ date: 2025-08-12 17:12:00 +0800
 categories: [论文阅读]
 tags: [数据合成]
 ---
+COT-SELF-INSTRUCT: BUILDING HIGH-QUALITY SYNTHETIC PROMPTS FOR REASONING AND NON-REASONING TASKS
+
+Paper：[https://arxiv.org/pdf/2507.23751](https://arxiv.org/pdf/2507.23751)
+
 ## 1. 摘要（ABSTRACT）
 
 - 核心方法：提出 CoT-Self-Instruct，一种通过思维链（Chain-of-Thought, CoT）引导大语言模型（LLM）生成高质量合成指令的框架。
@@ -81,6 +85,6 @@ tags: [数据合成]
   - 推理任务：验证不同模板效果（表4-10），证明CoT生成优于直接生成。
   - 非推理任务：长链CoT显著优于短链（表11）。
 - 规模控制：  
-  在相同训练量下（893条），CoT方法仍领先基线（表3）。
+  在相同训练量下（893条），CoT方法仍领先基线。
 
 总结：该论文通过将思维链引入自指令框架，结合针对性过滤机制，显著提升了合成数据的质量和模型性能，为LLM训练提供了新范式。
