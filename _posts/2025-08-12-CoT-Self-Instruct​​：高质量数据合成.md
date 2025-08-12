@@ -64,7 +64,7 @@ Paper：[https://arxiv.org/pdf/2507.23751](https://arxiv.org/pdf/2507.23751)
 - 数据集：s1k种子指令 → 生成5000条合成指令。
 - 关键结果：
   - CoT-Self-Instruct（53.0%）> Self-Instruct（49.5%）。
-  - 过滤后：Answer-Consistency进一步提升至57.2%（表1）。
+  - 过滤后：Answer-Consistency进一步提升至57.2%。
   - 对比基线：超越s1k（44.6%）和OpenMathReasoning（47.5%）。
 
 ### 5.2 非推理任务
@@ -82,8 +82,8 @@ Paper：[https://arxiv.org/pdf/2507.23751](https://arxiv.org/pdf/2507.23751)
 
 ## 附录（APPENDIX）
 - 消融实验：
-  - 推理任务：验证不同模板效果（表4-10），证明CoT生成优于直接生成。
-  - 非推理任务：长链CoT显著优于短链（表11）。
+  - 推理任务：验证不同模板效果，证明CoT生成优于直接生成。
+  - 非推理任务：长链CoT显著优于短链。
 - 规模控制：  
   在相同训练量下（893条），CoT方法仍领先基线。
 
