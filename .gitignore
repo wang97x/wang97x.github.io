@@ -25,3 +25,12 @@ package-lock.json
 # Misc
 _sass/dist
 assets/js/dist
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Paper2Post local cache
+papers/cache/*.json

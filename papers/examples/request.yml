@@ -1,0 +1,13 @@
+title: "Attention Is All You Need"
+url: "https://arxiv.org/abs/1706.03762"
+# 如果你有 PDF，就把它放到 papers/inbox/ 里，并填相对路径，例如：
+# pdf: "papers/inbox/attention-is-all-you-need.pdf"
+
+lang: "zh-CN"
+categories: ["PaperNotes"]
+tags: ["transformer", "attention"]
+
+# out_date: "2026-03-19"
+include_poster: true
+include_mindmap: true
+
