@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: CoT-Self-Instruct：思维链引导的高质量数据合成方法
 date: 2026-03-26 16:00:00 +0800
