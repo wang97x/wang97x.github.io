@@ -1,0 +1,20 @@
+{
+  "skills": {
+    "readonly": true,
+    "protected_paths": [
+      ".opencode/skills/"
+    ],
+    "require_permission_for": [
+      "write",
+      "delete",
+      "move",
+      "mkdir"
+    ],
+    "message": "⚠️ Skills 目录受保护，修改需要先询问用户权限"
+  },
+  "blog": {
+    "posts_directory": "_posts/",
+    "images_directory": "assets/images/",
+    "papers_directory": "_papers/"
+  }
+}
