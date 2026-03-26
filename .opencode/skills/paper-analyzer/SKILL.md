@@ -1,6 +1,6 @@
 ---
 name: paper-analyzer
-description: 通用论文分析技能，从多种来源（arXiv/GitHub/PDF/网页）提取论文信息并生成结构化分析结果。Use when: (1) 用户提供 arXiv 链接需要解析论文，(2) 用户提供 GitHub 论文项目需要提取信息，(3) 用户提供 PDF 文件需要分析，(4) 用户提供项目主页或论文标题需要搜索并分析，(5) 需要为 paper-to-blog 技能准备输入数据
+description: 通用论文分析技能，从多种来源（arXiv/GitHub/PDF/网页）提取论文信息并生成结构化分析结果。**优先使用于**: (1) 用户需要**分析/总结/理解论文内容**，(2) 用户提供 arXiv/GitHub/PDF 链接并提到"论文阅读/分析/总结"，(3) 需要将论文转换为博客文章，(4) 需要提取论文的元数据/章节/图片。**注意**: 如果用户只是需要合并/分割/旋转 PDF 文件操作，使用 pdf skill；如果用户需要**理解论文内容**，使用 paper-analyzer
 ---
 
 # Paper Analyzer - 通用论文分析技能
