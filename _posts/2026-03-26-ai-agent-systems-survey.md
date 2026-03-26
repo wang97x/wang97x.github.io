@@ -2,8 +2,8 @@
 layout: post
 title: AI Agent 系统综述：架构、应用与评测全景指南
 date: 2026-03-26 21:15:00 +0800
-categories: [论文阅读，AI Agent]
-tags: [AI Agent，多智能体系统，大语言模型，架构设计，基准评测，工具调用，记忆机制]
+categories: [论文阅读,AI Agent]
+tags: [AI Agent,多智能体系统，大语言模型，架构设计，基准评测，工具调用，记忆机制]
 math: true
 mermaid: true
 image: /assets/images/ai-agent-systems-survey/overview.png

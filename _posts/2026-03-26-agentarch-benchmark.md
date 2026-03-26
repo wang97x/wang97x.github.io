@@ -2,8 +2,8 @@
 layout: post
 title: AgentArch 基准评测：企业工作流中的智能体架构选择指南
 date: 2026-03-26 21:04:56 +0800
-categories: [论文阅读，AI Agent]
-tags: [AI Agent，多智能体系统，基准评测，企业应用，大语言模型，架构设计]
+categories: [论文阅读,AI Agent]
+tags: [AI Agent,多智能体系统，基准评测，企业应用，大语言模型，架构设计]
 math: true
 mermaid: true
 image: /assets/images/agentarch-benchmark/orchestration.png
