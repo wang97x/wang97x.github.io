@@ -29,6 +29,8 @@ assets/js/dist
 # OpenCode skills (use global installation instead)
 .opencode/skills/
 !opencode/skills/README.md
+!opencode/skills/paper-analyzer/
+!opencode/skills/paper-to-blog/
 
 # OpenCode configuration
 .opencode/opencode.json

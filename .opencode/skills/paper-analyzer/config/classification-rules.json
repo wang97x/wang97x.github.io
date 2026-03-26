@@ -1,0 +1,57 @@
+{
+  "figure_types": {
+    "overview": {
+      "keywords": ["roadmap", "overview", "pipeline", "workflow", "structure", "organization"],
+      "pages": [1, 2],
+      "priority": 1
+    },
+    "architecture": {
+      "keywords": ["framework", "architecture", "model", "system", "overview", "design"],
+      "pages": [2, 3, 4],
+      "priority": 2
+    },
+    "method": {
+      "keywords": ["method", "approach", "algorithm", "proposed", "our", "network", "module"],
+      "pages": [3, 4, 5, 6],
+      "priority": 3
+    },
+    "result": {
+      "keywords": ["result", "comparison", "accuracy", "performance", "benchmark", "evaluation", "metric"],
+      "pages": [7, 8, 9, 10, 11, 12],
+      "priority": 4
+    },
+    "ablation": {
+      "keywords": ["ablation", "study", "analysis", "component", "contribution"],
+      "pages": [8, 9, 10, 11, 12],
+      "priority": 5
+    },
+    "table": {
+      "keywords": ["table", "statistic", "benchmark", "dataset", "hyperparameter"],
+      "pages": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "priority": 6
+    }
+  },
+  "naming_convention": {
+    "overview": "roadmap",
+    "architecture": "framework",
+    "method": "method",
+    "result": "results",
+    "ablation": "ablation",
+    "table": "table",
+    "other": "figure"
+  },
+  "captions": {
+    "overview": "论文内容路线图，展示整体结构和主要章节",
+    "architecture": "系统架构图，展示核心组件和数据流",
+    "method": "方法示意图，展示提出的核心技术",
+    "result": "实验结果对比图，展示性能提升",
+    "ablation": "消融实验结果，分析各组件贡献",
+    "table": "实验数据表格，对比不同方法的性能",
+    "other": "论文插图"
+  },
+  "filters": {
+    "min_size_bytes": 1000,
+    "max_figures_per_page": 5,
+    "exclude_keywords": ["logo", "icon", "decorative", "author", "affiliation"]
+  }
+}
