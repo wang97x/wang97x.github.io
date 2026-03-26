@@ -121,7 +121,7 @@ image: /assets/images/{paper-slug}/pipeline.png
 > - **作者**: Author et al. (机构)
 > - **会议**: 会议/期刊
 > - **arXiv**: [链接](url)
-> - **代码**: [GitHub](url)
+> - **代码**: [GitHub](url) (如公开)
 
 ---
 
