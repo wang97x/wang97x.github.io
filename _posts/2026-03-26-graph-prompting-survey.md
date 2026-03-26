@@ -3,7 +3,7 @@ layout: post
 title: 图提示学习综述：Graph Prompting 最新进展与未来方向
 date: 2026-03-26 15:30:00 +0800
 categories: [论文阅读,图学习]
-tags: [Graph Learning, Prompt Learning, 预训练，高效微调，KDD 2025, 综述，自监督学习，GNN]
+tags: [Prompt Learning, 预训练,高效微调,综述,自监督学习,GNN]
 math: true
 mermaid: true
 image: /assets/images/graph-prompting/workflow.png
