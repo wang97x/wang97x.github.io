@@ -15,6 +15,7 @@ import json
 import re
 from datetime import datetime
 from pathlib import Path
+from pathlib import Path
 
 
 def load_analysis(json_path):
@@ -285,6 +286,31 @@ def convert_to_blog(analysis_json_path, categories_str, output_dir):
     # 1. 加载分析
     print(f"Loading analysis from: {analysis_json_path}")
     analysis = load_analysis(analysis_json_path)
+    
+    # 1.5 重命名图片（如果有）
+    paper_dir = Path(analysis_json_path).parent
+    figures_dir = paper_dir / 'figures'
+    assets_dir = Path('assets/images') / analysis.get('paper_slug', 'unknown')
+    
+    if figures_dir.exists():
+        print(f"\nRenaming images from: {figures_dir}")
+        print(f"Output to: {assets_dir}")
+        
+        # 调用重命名脚本
+        rename_script = Path(__file__).parent / 'rename_images.py'
+        if rename_script.exists():
+            import subprocess
+            subprocess.run([
+                sys.executable, str(rename_script),
+                str(figures_dir),
+                str(assets_dir),
+                '--analysis', analysis_json_path
+            ])
+            
+            # 重新加载分析（包含重命名后的信息）
+            analysis = load_analysis(analysis_json_path)
+        else:
+            print(f"⚠️  Rename script not found: {rename_script}")
     
     # 2. 生成 Frontmatter
     frontmatter, slug = generate_frontmatter(analysis, categories_str)
