@@ -210,3 +210,36 @@ highlights.append("论文建立了完整的理论框架...\n")
 if '未来工作' not in body:
     warnings.append("Missing '未来工作' section")
 ```
+
+## 图片处理
+
+### 自动重命名
+
+脚本会自动根据图片分类重命名：
+
+| 类型 | 重命名为 |
+|------|---------|
+| overview | roadmap.png |
+| architecture | framework.png |
+| method | method.png |
+| result | results.png |
+| ablation | ablation.png |
+| table | table.png |
+
+### 自动说明
+
+为每张图片生成斜体说明：
+
+```markdown
+![图 1](/assets/images/slug/roadmap.png)
+*图 1：论文内容路线图，展示整体结构和主要章节（第 1 页）*
+```
+
+### 手动重命名
+
+```bash
+python .opencode/skills/paper-to-blog/scripts/rename_images.py \
+  "_papers/slug/figures" \
+  "assets/images/slug" \
+  --analysis "_papers/slug/analysis.json"
+```
