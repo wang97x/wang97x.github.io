@@ -2,8 +2,8 @@
 layout: post
 title: CoT-Self-Instruct：思维链引导的高质量数据合成方法
 date: 2026-03-26 16:00:00 +0800
-categories: [论文阅读]
-tags: [LLM, 数据合成,思维链,Self-Instruct,强化学习]
+categories: [论文阅读,数据合成]
+tags: [LLM,数据合成,思维链,Self-Instruct,强化学习]
 math: true
 mermaid: true
 image: /assets/images/CoT-Self-Instruct/fig1_page1.png
