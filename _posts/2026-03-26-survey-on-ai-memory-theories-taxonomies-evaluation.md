@@ -13,7 +13,7 @@ image: /assets/images/survey-ai-memory/roadmap.png
 > - **标题**: Survey on AI Memory: Theories, Taxonomies, Evaluations, and Emerging Trends
 > - **作者**: Ting Bai, Jiayang Fan, Xiaoshuai Wen et al.
 > - **机构**: BaiJia AI Team, 北京邮电大学，华为技术有限公司
-> - **发布**: 2024
+> - **发布**: 2026/01/15
 > - **GitHub**: [项目地址](https://github.com/BAI-LAB/Survey-on-AI-Memory)
 
 ---
