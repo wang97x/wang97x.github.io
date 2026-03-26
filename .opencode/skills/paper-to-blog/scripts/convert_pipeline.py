@@ -26,11 +26,11 @@ def run_step(cmd, description):
     result = subprocess.run(cmd, capture_output=True, text=True)
     
     if result.returncode != 0:
-        print(f"❌ Failed: {description}")
+        print(f"[ERROR] Failed: {description}")
         print(f"Error: {result.stderr}")
         return False
     
-    print(f"✅ Success: {description}")
+    print(f"[OK] Success: {description}")
     return True
 
 
@@ -58,7 +58,7 @@ def main():
     # Step 1: 下载论文
     download_script = analyzer_dir / 'download_paper.py'
     if not download_script.exists():
-        print(f"❌ Download script not found: {download_script}")
+        print(f"[ERROR] Download script not found: {download_script}")
         sys.exit(1)
     
     # 生成输出目录名
@@ -124,12 +124,12 @@ def main():
             import shutil
             try:
                 shutil.rmtree(paper_dir)
-                print(f"✅ Cleaned up: {paper_dir}")
+                print(f"[OK] Cleaned up: {paper_dir}")
             except Exception as e:
-                print(f"⚠️ Failed to cleanup: {e}")
+                print(f"[WARN] Failed to cleanup: {e}")
     
     print(f"\n{'='*60}")
-    print("✅ Conversion completed successfully!")
+    print("[OK] Conversion completed successfully!")
     print('='*60)
     print(f"\nOutput files:")
     print(f"  - Blog post: {args.output}")

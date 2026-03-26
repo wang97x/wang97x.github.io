@@ -152,7 +152,7 @@ def validate_blog_post(path):
     # 1. 加载
     frontmatter, body, error = load_blog_post(path)
     if error:
-        print(f"❌ {error}")
+        print(f"[ERROR] {error}")
         return False
     
     # 2. 检查 Frontmatter
@@ -168,19 +168,19 @@ def validate_blog_post(path):
     print("=== Validation Results ===\n")
     
     if all_errors:
-        print("❌ ERRORS:")
+        print("[ERROR] ERRORS:")
         for err in all_errors:
             print(f"  - {err}")
         print()
     
     if all_warnings:
-        print("⚠️ WARNINGS:")
+        print("[WARN] WARNINGS:")
         for warn in all_warnings:
             print(f"  - {warn}")
         print()
     
     if not all_errors and not all_warnings:
-        print("✅ All checks passed!")
+        print("[OK] All checks passed!")
     
     # 5. 总结
     print(f"Total: {len(all_errors)} errors, {len(all_warnings)} warnings")

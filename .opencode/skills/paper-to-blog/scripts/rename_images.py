@@ -75,7 +75,7 @@ def rename_images(figures_dir, output_dir, analysis_json_path):
         img_type = fig.get('type', 'other')
         
         if not src_path or not os.path.exists(src_path):
-            print(f"  ⚠️  File not found: {src_path}")
+            print(f"  [WARN] File not found: {src_path}")
             continue
         
         # 生成新名称
@@ -107,7 +107,7 @@ def rename_images(figures_dir, output_dir, analysis_json_path):
             'caption': caption
         })
         
-        print(f"  ✅  {os.path.basename(src_path)} → {new_name} ({img_type})")
+        print(f"  [OK]  {os.path.basename(src_path)} -> {new_name} ({img_type})")
     
     # 更新分析 JSON
     analysis['renamed_figures'] = renamed_figures
@@ -117,7 +117,7 @@ def rename_images(figures_dir, output_dir, analysis_json_path):
     with open(analysis_json_path, 'w', encoding='utf-8') as f:
         json.dump(analysis, f, ensure_ascii=False, indent=2)
     
-    print(f"\n✅  Renamed {len(renamed_figures)} images")
+    print(f"\n[OK]  Renamed {len(renamed_figures)} images")
     print(f"    Updated analysis JSON: {analysis_json_path}")
     
     return renamed_figures

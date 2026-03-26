@@ -294,10 +294,14 @@ def convert_to_blog(analysis_json_path, categories_str, output_dir):
     print(f"Loading analysis from: {analysis_json_path}")
     analysis = load_analysis(analysis_json_path)
     
-    # 1.5 重命名图片（如果有）
+    # 1.5 生成 slug（用于图片目录和博客文件名）
+    slug = generate_slug(analysis['metadata']['title'])
+    
+    # 重命名图片（如果有）
     paper_dir = Path(analysis_json_path).parent
     figures_dir = paper_dir / 'figures'
-    assets_dir = Path('assets/images') / analysis.get('paper_slug', 'unknown')
+    # 使用 slug 作为图片目录名，确保与博客文件名一致
+    assets_dir = Path('assets/images') / slug
     
     if figures_dir.exists():
         print(f"\nRenaming images from: {figures_dir}")
@@ -312,15 +316,15 @@ def convert_to_blog(analysis_json_path, categories_str, output_dir):
                 str(figures_dir),
                 str(assets_dir),
                 '--analysis', analysis_json_path
-            ])
+            ], encoding='utf-8')  # 指定 UTF-8 编码
             
             # 重新加载分析（包含重命名后的信息）
             analysis = load_analysis(analysis_json_path)
         else:
-            print(f"⚠️  Rename script not found: {rename_script}")
+            print(f"[WARN] Rename script not found: {rename_script}")
     
     # 2. 生成 Frontmatter
-    frontmatter, slug = generate_frontmatter(analysis, categories_str)
+    frontmatter, _ = generate_frontmatter(analysis, categories_str)
     
     # 3. 生成正文
     content_parts = []
