@@ -106,7 +106,7 @@ layout: post
 title: {中文标题}
 date: YYYY-MM-DD HH:MM:SS +0800
 categories: [论文阅读，相关领域]
-tags: [LLM, 具体技术]
+tags: [LLM, 具体技术]  # 使用中文逗号分隔多个标签
 math: true
 mermaid: true
 image: /assets/images/{paper-slug}/pipeline.png
@@ -274,6 +274,7 @@ assets/images/{paper-slug}/
 **tags**: `[LLM, 具体技术，...]`
 - 5-8 个相关标签
 - 示例：`[LLM, 思维链，知识蒸馏，可解释性，推理]`
+- **注意**: 使用中文逗号 `，` 分隔标签，否则 Jekyll 无法正确解析
 
 ## 依赖项
 
