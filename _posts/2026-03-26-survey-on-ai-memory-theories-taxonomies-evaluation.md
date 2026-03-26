@@ -2,8 +2,8 @@
 layout: post
 title: AI 记忆机制全景综述：从认知理论到智能体架构
 date: 2026-03-26 20:22:33 +0800
-categories: [论文阅读，AI Agent]
-tags: [AI Memory, Agent, 多智能体系统，记忆机制，认知科学，LLM, 综述]
+categories: [论文阅读,AI Agent]
+tags: [AI Memory, Agent, 多智能体系,记忆机制,认知科学,LLM, 综述]
 math: true
 mermaid: true
 image: /assets/images/survey-ai-memory/roadmap.png

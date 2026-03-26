@@ -28,11 +28,11 @@ def run_command(cmd, description):
     result = subprocess.run(cmd, capture_output=True, text=True)
     
     if result.returncode != 0:
-        print(f"❌ Failed: {description}")
+        print(f"[Error] Failed: {description}")
         print(f"Error: {result.stderr}")
         return False
     
-    print(f"✅ Success: {description}")
+    print(f"[OK] Success: {description}")
     return True
 
 
@@ -64,7 +64,7 @@ def analyze_paper(input_source, categories, output_dir=None, run_blog_converter=
         
         output_dir = f"_papers/{slug}"
     
-    print(f"\n📁 Output directory: {output_dir}")
+    print(f"\n[Output] Output directory: {output_dir}")
     
     # 2. 下载论文
     download_script = script_dir / 'download_paper.py'
@@ -92,14 +92,14 @@ def analyze_paper(input_source, categories, output_dir=None, run_blog_converter=
         [sys.executable, str(extract_script), pdf_path, figures_dir, '--analysis', analysis_path],
         "Extract figures"
     ):
-        print("⚠️ Figure extraction failed, continuing without figures")
+        print("[Warning] Figure extraction failed, continuing without figures")
     
     # 5. 读取分析结果
     with open(analysis_path, 'r', encoding='utf-8') as f:
         analysis = json.load(f)
     
     print(f"\n{'='*60}")
-    print("✅ Paper analysis completed!")
+    print("[OK] Paper analysis completed!")
     print('='*60)
     print(f"\nOutput files:")
     print(f"  - Analysis JSON: {analysis_path}")
@@ -120,7 +120,7 @@ def analyze_paper(input_source, categories, output_dir=None, run_blog_converter=
                 "Convert to blog"
             )
         else:
-            print(f"⚠️ Blog converter script not found: {blog_script}")
+            print(f"[Warning] Blog converter script not found: {blog_script}")
     
     return output_dir, analysis
 
@@ -145,7 +145,7 @@ def main():
     )
     
     if not output_dir:
-        print("\n❌ Analysis failed!")
+        print("\n[Error] Analysis failed!")
         sys.exit(1)
     
     # 7. 询问清理
@@ -156,9 +156,9 @@ def main():
             import shutil
             try:
                 shutil.rmtree(output_dir)
-                print(f"✅ Cleaned up: {output_dir}")
+                print(f"[OK] Cleaned up: {output_dir}")
             except Exception as e:
-                print(f"⚠️ Failed to cleanup: {e}")
+                print(f"[Warning] Failed to cleanup: {e}")
 
 
 if __name__ == "__main__":
