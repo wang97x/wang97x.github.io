@@ -38,3 +38,9 @@ nul
 *.tmp
 *.log
 .DS_Store
+
+# Paper analysis temporary files
+_papers/*.json
+_papers/*.py
+_papers/figures/
+*.tmp
