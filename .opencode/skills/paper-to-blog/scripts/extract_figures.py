@@ -41,17 +41,27 @@ KEY_FIGURE_PATTERNS = [
 MAX_FIGURES = 8
 
 
-def find_pdf_figures(figures_dir):
-    """Find PDF figure files in the figures directory."""
-    if not os.path.exists(figures_dir):
-        return []
+def find_pdf_figures(paper_dir):
+    """Find PDF figure files in possible figure directories."""
+    # Support multiple possible directory names
+    possible_dirs = ['figures', 'images', 'figs', 'img', 'pics']
+    
+    figures_dir = None
+    for dir_name in possible_dirs:
+        test_dir = os.path.join(paper_dir, dir_name)
+        if os.path.exists(test_dir):
+            figures_dir = test_dir
+            break
+    
+    if not figures_dir:
+        return [], None
     
     pdf_files = []
     for f in os.listdir(figures_dir):
         if f.endswith('.pdf'):
             pdf_files.append(f)
     
-    return pdf_files
+    return pdf_files, figures_dir
 
 
 def prioritize_figures(pdf_files):
@@ -77,23 +87,26 @@ def convert_pdf_to_png(pdf_path, output_path, zoom=2):
         doc.close()
         return True
     except Exception as e:
-        print(f"  ⚠ Error converting {pdf_path}: {e}")
+        print(f"  [Warning] Error converting {pdf_path}: {e}")
         return False
 
 
 def extract_figures(paper_dir, output_dir):
     """Extract key figures from paper source package."""
-    figures_dir = os.path.join(paper_dir, 'figures')
-    
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
     
-    # Find all PDF figures
-    pdf_files = find_pdf_figures(figures_dir)
+    # Find all PDF figures (supports multiple directory names)
+    pdf_files, figures_dir = find_pdf_figures(paper_dir)
+    
+    if not figures_dir:
+        print("[Warning] No figures/images directory found")
+        return []
+    
     print(f"Found {len(pdf_files)} PDF figures in {figures_dir}")
     
     if not pdf_files:
-        print("⚠ No PDF figures found!")
+        print("[Warning] No PDF figures found!")
         return []
     
     # Prioritize figures
@@ -112,9 +125,9 @@ def extract_figures(paper_dir, output_dir):
         print(f"Converting {pdf_name}...")
         if convert_pdf_to_png(pdf_path, png_path):
             converted.append(png_name)
-            print(f"  ✓ {png_name}")
+            print(f"  [OK] {png_name}")
     
-    print(f"\n✓ Extracted {len(converted)} figures to {output_dir}")
+    print(f"\n[OK] Extracted {len(converted)} figures to {output_dir}")
     return converted
 
 

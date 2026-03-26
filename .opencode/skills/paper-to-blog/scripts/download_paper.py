@@ -53,7 +53,7 @@ def download_paper(url_or_id, output_dir):
     with tarfile.open(source_path, 'r:gz') as tar:
         tar.extractall(path=output_dir)
     
-    print(f"✓ Paper downloaded to {output_dir}")
+    print(f"[OK] Paper downloaded to {output_dir}")
     return arxiv_id, output_dir
 
 
