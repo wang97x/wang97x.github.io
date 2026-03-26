@@ -77,13 +77,18 @@ def generate_chinese_title(analysis):
 
 def parse_categories(categories_str):
     """解析分类字符串，确保使用英文逗号"""
-    # 替换中文逗号为英文逗号
-    categories_str = categories_str.replace(',', ',').strip()
+    # 替换中文逗号为英文逗号（使用 Unicode 明确区分）
+    # 中文逗号：\uff0c 或 '，'
+    # 英文逗号：\u002c 或 ','
+    categories_str = categories_str.replace('\uff0c', ',').replace('，', ',').strip()
+    
+    # 移除所有空格
+    categories_str = categories_str.replace(' ', '')
     
     # 验证格式
     if ',' not in categories_str:
-        print(f"Warning: Categories should be like '一级，二级', got: {categories_str}")
-        return categories_str
+        print(f"Warning: Categories should be like '论文阅读，Agent', got: {categories_str}")
+        print("  Auto-fixing: Added comma separator if missing")
     
     return categories_str
 
@@ -91,10 +96,12 @@ def parse_categories(categories_str):
 def parse_tags(tags, max_tags=8):
     """解析标签，确保使用英文逗号"""
     if isinstance(tags, list):
-        return tags[:max_tags]
+        return [tag.strip() for tag in tags[:max_tags]]
     elif isinstance(tags, str):
-        # 分割字符串
-        tags_list = [t.strip() for t in re.split(r'[,,]', tags)]
+        # 先替换中文逗号为英文逗号
+        tags_str = tags.replace('\uff0c', ',').replace('，', ',')
+        # 使用英文逗号分割
+        tags_list = [t.strip() for t in tags_str.split(',') if t.strip()]
         return tags_list[:max_tags]
     return []
 
