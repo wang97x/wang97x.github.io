@@ -9,8 +9,11 @@ if "%title%"=="" (
     exit /b 1
 )
 
-set /p categories=Please enter categories (comma separated, default: study-notes):
-if "%categories%"=="" set categories=study-notes
+set /p categories=Please enter topic categories (comma separated, e.g. AI Agent/大模型与训练/检索与排序/工具与框架/编程基础/博客建设):
+if "%categories%"=="" (
+    echo Categories cannot be empty.
+    exit /b 1
+)
 
 set /p tags=Please enter tags (comma separated, optional):
 

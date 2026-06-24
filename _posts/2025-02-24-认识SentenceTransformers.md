@@ -3,8 +3,8 @@ layout: post
 title: "认识SentenceTransformers"
 author: "wang"
 date: 2025-02-24 12:53:00 +0800
-categories: [Information Retrieval]
-tags: [SentenceTransformers]
+categories: [检索与排序]
+tags: [SentenceTransformers, 概念笔记]
 ---
 ### SentenceTransformers 
 

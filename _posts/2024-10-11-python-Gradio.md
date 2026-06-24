@@ -2,8 +2,8 @@
 layout: post
 title: "python库-Gradio"
 date: 2024-10-10 22:56:51 +0800
-categories: [Python]
-tags: [Gradio]
+categories: [工具与框架]
+tags: [Gradio, Python, 概念笔记]
 ---
 
 # Gradio是什么

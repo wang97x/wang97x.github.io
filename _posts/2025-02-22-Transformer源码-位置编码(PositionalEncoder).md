@@ -3,8 +3,8 @@ layout: post
 title: "Transformer源码-位置编码(PositionalEncoder)"
 author: "wang"
 date: 2025-02-22 13:38:00 +0800
-categories: [LLM]
-tags: [Transformer]
+categories: [大模型与训练]
+tags: [Transformer, 源码拆解]
 math: true
 ---
 

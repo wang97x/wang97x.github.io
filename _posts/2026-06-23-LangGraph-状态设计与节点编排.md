@@ -3,8 +3,8 @@ layout: post
 title: "LangGraph 状态设计与节点编排"
 author: "wang"
 date: 2026-06-23 12:05:00 +0800
-categories: [Langchain, AI Agent]
-tags: [LangGraph, LangChain, State, Agent, Prompt Engineering]
+categories: [AI Agent]
+tags: [LangGraph, LangChain, State, Agent, Prompt Engineering, 工程实践]
 ---
 
 > **参考资料**

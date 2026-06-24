@@ -3,8 +3,8 @@ layout: post
 title: "ElasticSearch"
 author: "wang"
 date: 2024-10-11 14:57:00 +0800
-categories: [LLM]
-tags: [llm, ElasticSearch]
+categories: [检索与排序]
+tags: [Elasticsearch, 概念笔记]
 ---
 # ElasticSearch
 ## ES概述

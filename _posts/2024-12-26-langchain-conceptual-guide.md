@@ -3,8 +3,8 @@ layout: post
 title: Langchain相关概念
 author: "wang"
 date: 2024-12-19 18:26:00 +0800
-categories: [Langchain]
-tags: [Conceptual]
+categories: [工具与框架]
+tags: [LangChain, 概念笔记]
 ---
 # 概念
 - 聊天模型：通过聊天 API 公开的 LLM，它们将消息序列作为输入并输出一条消息。

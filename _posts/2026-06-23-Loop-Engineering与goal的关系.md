@@ -3,8 +3,8 @@ layout: post
 title: "Loop Engineering 14 步路线图：以及 Codex /goal 在哪里最有用"
 author: "wang"
 date: 2026-06-23 20:10:00 +0800
-categories: [AI Agent, Engineering]
-tags: [Loop Engineering, Goal, Codex, Agent Workflow, Automation]
+categories: [AI Agent]
+tags: [Loop Engineering, Goal, Codex, Agent Workflow, Automation, 工程实践]
 ---
 
 > **参考链接**

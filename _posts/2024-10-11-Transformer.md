@@ -3,8 +3,8 @@ layout: post
 title: "Transformer系列"
 author: "wang"
 date: 2024-10-11 11:27:00 +0800
-categories: [LLM]
-tags: [python, Transformer, llm]
+categories: [大模型与训练]
+tags: [Transformer, LLM, 概念笔记]
 ---
 # Transformer系列-基础架构
 ## Transformer架构：

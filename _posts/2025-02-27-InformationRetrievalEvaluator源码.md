@@ -3,8 +3,8 @@ layout: post
 title: "InformationRetrievalEvaluator源码"
 author: "wang"
 date: 2025-02-27 09:49:00 +0800
-categories: [Information Retrieval]
-tags: [SentenceTransformers, InformationRetrievalEvaluator ]
+categories: [检索与排序]
+tags: [SentenceTransformers, InformationRetrievalEvaluator, 源码拆解]
 ---
 # InformationRetrievalEvaluator类解析与总结
 

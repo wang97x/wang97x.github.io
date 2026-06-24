@@ -3,8 +3,8 @@ layout: post
 title: "Langchain-FAISS"
 author: "wang"
 date: 2025-03-04 09:00:00 +0800
-categories: [Langchain]
-tags: [faiss]
+categories: [检索与排序]
+tags: [LangChain, FAISS, 工程实践]
 ---
 
 

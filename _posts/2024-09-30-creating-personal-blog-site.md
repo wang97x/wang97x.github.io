@@ -2,8 +2,8 @@
 layout: post
 title: "使用Jekyll搭建个人博客"
 date: 2024-09-30 22:56:51 +0800
-categories: [Blogging]
-tags: [jekyll, github pages]
+categories: [博客建设]
+tags: [Jekyll, GitHub Pages]
 ---
 本文将介绍如何使用Jekyll搭建个人博客，并部署在GitHub Pages上。
 

@@ -3,8 +3,8 @@ layout: post
 title: "Dense Retrieval"
 author: "wang"
 date: 2025-03-24 09:46:00 +0800
-categories: [Information Retrieval]
-tags: [Retriever]
+categories: [检索与排序]
+tags: [Retriever, 概念笔记]
 ---
 原理：通过深度学习模型将文本映射为向量，基于向量相似度检索。
 

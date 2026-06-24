@@ -3,8 +3,8 @@ layout: post
 title: Langchain相关概念-工具
 author: "wang"
 date: 2024-12-19 18:26:00 +0800
-categories: [Langchain]
-tags: [Conceptual]
+categories: [工具与框架]
+tags: [LangChain, 概念笔记]
 ---
 # 工具
 ## 概述

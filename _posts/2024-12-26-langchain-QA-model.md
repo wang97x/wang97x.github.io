@@ -3,8 +3,8 @@ layout: post
 title: Langchain相关概念-聊天模型
 author: "wang"
 date: 2024-12-19 18:26:00 +0800
-categories: [Langchain]
-tags: [Conceptual]
+categories: [工具与框架]
+tags: [LangChain, 概念笔记]
 ---
 # 聊天模型
 ## 概述
@@ -25,5 +25,4 @@ tags: [Conceptual]
 - batch：一种允许您将对聊天模型的多个请求批量处理以进行更高效处理的方法。
 - bind_tools：一种允许您将工具绑定到聊天模型以在模型的执行上下文中使用的方法。
 - with_structured_output：invoke 方法的包装器，用于原生支持结构化输出的模型。
-
 

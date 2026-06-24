@@ -3,8 +3,8 @@ layout: post
 title: "MultipleNegativesRankingLoss"
 author: "wang"
 date: 2025-02-24 14:50:00 +0800
-categories: [Information Retrieval]
-tags: [SentenceTransformers, Loss]
+categories: [检索与排序]
+tags: [SentenceTransformers, Loss, 概念笔记]
 ---
 ### MultipleNegativesRankingLoss（多负样本排序损失）总结
 

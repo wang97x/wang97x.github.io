@@ -3,8 +3,8 @@ layout: post
 title: "SentenceTransformerTrainingArguments"
 author: "wang"
 date: 2025-02-25 09:59:00 +0800
-categories: [Information Retrieval]
-tags: [SentenceTransformers, SentenceTransformerTrainingArguments]
+categories: [检索与排序]
+tags: [SentenceTransformers, SentenceTransformerTrainingArguments, 源码拆解]
 ---
 `SentenceTransformerTrainingArguments` 是用于配置 Sentence Transformers 模型训练的参数类，继承自 `TrainingArguments` 并添加了一些特定于 Sentence Transformers 的参数。以下是其主要参数的解析：
 

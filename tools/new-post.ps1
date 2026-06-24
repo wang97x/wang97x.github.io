@@ -2,7 +2,7 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$Title,
 
-    [string[]]$Categories = @("study-notes"),
+    [string[]]$Categories = @(),
 
     [string]$CategoriesCsv = "",
 
@@ -77,6 +77,10 @@ if (-not [string]::IsNullOrWhiteSpace($CategoriesCsv)) {
 
 if (-not [string]::IsNullOrWhiteSpace($TagsCsv)) {
     $Tags = Split-CommaSeparatedValues -Value $TagsCsv
+}
+
+if ($Categories.Count -eq 0) {
+    throw "Please provide at least one topic category. Recommended categories: AI Agent, 大模型与训练, 检索与排序, 工具与框架, 编程基础, 博客建设."
 }
 
 $resolvedOutputDir = if ([System.IO.Path]::IsPathRooted($OutputDir)) {

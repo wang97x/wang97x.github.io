@@ -3,8 +3,8 @@ layout: post
 title: "Encoder-Decoder、Encoder-Only、Decoder-Only和Prefix-LM"
 author: "wang"
 date: 2025-03-25 20:20:00 +0800
-categories: [LLM]
-tags: [llm]
+categories: [大模型与训练]
+tags: [LLM, 概念笔记]
 ---
 以下是四种主要模型架构的详细中文解析：
 
